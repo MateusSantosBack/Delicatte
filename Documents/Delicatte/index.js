@@ -16,17 +16,16 @@ function adicionarOvo(nome, gramas, preco, estoque, categoria) {
   });
 }
 
-// 3. Função para Ver o Estoque
+
 function verEstoque() {
   connection.query('SELECT * FROM produtos_pascoa', (err, rows) => {
     if (err) throw err;
     console.log('\n--- 🐰 ESTOQUE ATUAL DA DELICATTE ---');
-    console.table(rows); // Exibe em formato de tabela bonitinho no terminal
+    console.table(rows); 
   });
 }
 
-// --- TESTANDO ---
-// Primeiro adicionamos um, depois listamos
+
 adicionarOvo('Ovo de Colher Ninho', 350, 65.00, 10, 'Gourmet');
 
 setTimeout(() => {
